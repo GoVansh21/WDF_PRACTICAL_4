@@ -1,0 +1,207 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+#themeToggle {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+
+/* NOTIFICATION BANNER */
+
+.notification {
+    background-color: #e8c99b;
+    color: #3b241b;
+    padding: 15px;
+    text-align: center;
+}
+
+#closeNotification {
+    float: right;
+    cursor: pointer;
+}
+
+
+/* HERO BUTTON */
+
+#openModal {
+    background-color: #3b241b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* MODAL POPUP */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #f5ebdd;
+    color: #3b241b;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+}
+
+
+/* COFFEE SLIDER */
+
+.slider {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.slide {
+    display: none;
+    background: #e8c99b;
+    color: #3b241b;
+    padding: 35px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slider button {
+    background: #3b241b;
+    color: white;
+    margin: 5px;
+}
+
+
+/* FAQ SECTION */
+
+.faq {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.faq-item {
+    margin: 12px 0;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background: #3b241b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    background: #e8c99b;
+    color: #3b241b;
+    padding: 15px;
+}
+
+.faq-answer.show {
+    display: block;
+}
+
+
+/* DARK MODE */
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode footer {
+    background-color: #17110e;
+    color: white;
+}
+
+body.dark-mode .hero,
+body.dark-mode .features,
+body.dark-mode .faq {
+    color: white;
+}
+
+body.dark-mode .slide,
+body.dark-mode .faq-answer {
+    background-color: #444;
+    color: white;
+}
+
+body.dark-mode .modal-content {
+    background-color: #333;
+    color: white;
+}
+
+
+/* MOBILE HAMBURGER MENU */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero img {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
